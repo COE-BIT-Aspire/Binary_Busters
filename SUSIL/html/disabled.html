@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212529;
+    }
+
+    .heading{
+        transform: translateX(-50%);
+    }
+
+    *{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-y:hidden;
+}
+
+.normal{
+    background-color: #F1F3F5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.overlay{
+    height: 90vh;
+    width: 180vh;
+    background-color: #fff;
+    border-radius: 10px;
+    
+}
+
+.toggleOut{
+background-color: #2779A7;
+height: 70px;
+width: 40px;
+border-radius: 100px;
+display: flex;
+justify-content: center;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+.toggleDown{
+    align-items: flex-end;
+}
+
+.toggleIn{
+background-color: #fff;
+height:30px;
+width: 30px;
+border-radius: 100px;
+}
+
+.heading{
+    width: 18rem;
+    /* background-color: red; */
+    margin-left: 12rem;
+}
+
+.heading h1{
+    font-size: 40px;
+    color: #2779A7;
+    margin-bottom: 1rem;
+}
+
+.line{
+    height: 1px;
+    width: 20rem;
+    background-color: #2778a79a;
+}
+
+.classes{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    width: 180vh;
+    overflow-y: scroll;
+}
+
+
+
+.classes table{
+    background-color: #FF9398;
+    text-align: center;
+    width: 55rem;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+table,th,td{
+    padding: 20px;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1in;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.nav h1{
+    margin-left: 3rem;
+}
+
+.btn{
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #2779A7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn:hover{
+    background-color: #63E6BE;
+    color: #000;
+}
+
+.btn--login{
+    margin-right: 3rem;
+}
+
+.sect{
+    height: 100vh;
+    display: flex;
+}
+
+.section--1{
+    background-color: #2779A7;
+}
+
+.section--2{
+    background-color: #9FA0A2;
+}
+.section--3{
+    background-color: #63E6BE;
+}
+
+.image{
+    margin-top: 1.7in;
+    height: 70vh;
+    width: 8in;
+    /* background: red; */
+}
+
+.image:nth-child(even){
+    margin-left: 5.6rem;
+}
+
+.textArea{
+    margin-top: 2.5in;
+    margin-left: 5rem;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    
+}
+
+.textArea:nth-child(odd){
+    margin-left: 7rem;
+}
+
+.textArea h1{
+    font-size: 60px;
+    width: 7in;
+    color: #343A40;
+}
+
+.textArea p{
+    width: 4in;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.btn--sect{
+    background: white;
+    color: #343A40;
+    font-weight: bold;
+}
+
+.image img{
+    width: 100%;
+}
+
+.image:nth-child(even){
+    width: 5in;
+}
+
+footer{
+    width: 100%;
+    height: 1.4in;
+    background-color: #000;
+}
+                
+    </style>
+</head>
+<body>
+    <div class="normal">
+        <div class="overlay">
+            <div class="heading">
+                <h1>Give Your Votings Here!!!</h1>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        'use strict';
+
+let speech = new SpeechSynthesisUtterance();
+let flag = -1;
+let final_vote = ""; // Changed from const to let
+
+let instruction_1 = "This is an online voting system for people with disabilities. Here are the instructions: first, the class names will be read twice. After that, you should confirm by pressing space, or if you want to listen to next, you could press enter. Press Enter to start";
+
+let classes = ["sara","alex"];
+let classString = classes.join(",   ");
+speech.rate = 1;
+
+const speakFunction = (words,srate = 1) => {
+    speech.text = words;
+    speech.rate = srate;
+    window.speechSynthesis.speak(speech);
+};
+
+const handleKeyup = (e) => {
+    if (e.code === "Enter") {
+        for (let i = 0; i < 2; i++) {
+            speakFunction(classString,0.5);
+        }
+        speech.addEventListener("end", handleEnd);
+        window.removeEventListener('keyup', handleKeyup); // Remove this event listener after it's used
+        speakFunction("listening's over, press enter to start voting");
+    }
+};
+
+const handleKeyEach = (e) => {
+
+    if (e.code === "Enter") {
+        if(!(flag < classes.length)) flag =-1;
+        flag++;
+        speakFunction(`${classes[flag]}, If you want to vote for ${classes[flag]} press space or to move next press enter`,0.5)
+    }
+    else if(e.code === "Space"){
+            final_vote = classes[flag];
+            speech.text = `Thank you for your votes, You successfully voted for ${final_vote}`;
+            window.speechSynthesis.speak(speech);
+            window.removeEventListener('keyup', handleKeyEach);
+    }
+}; 
+
+const handleEnd = (event) => {
+    event.preventDefault();
+    window.removeEventListener('keyup', handleKeyup);
+    window.addEventListener('keyup',handleKeyEach);
+};
+
+speakFunction(instruction_1);
+window.addEventListener('keyup', handleKeyup);
+
+    </script>
+</body>
+</html>

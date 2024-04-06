@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic input form</title>
+    <style>
+        body {
+            
+            background-image: url('background.jpg');
+            height: 100vh;
+            margin: 0;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        form {
+            background-color: rgba(224, 217, 217, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        input,button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+            </style>
+</head>
+<body background="background.jpg">
+
+    <form action="second.html">
+        USERNAME: <input placeholder="Enter your name" type="text"><br>
+        ROLLNO: <input placeholder="Enter your roll number" type="text"><br>
+        MAIL ID: <input placeholder="Enter your mail id" type="text"><br>
+        DOB: <input placeholder="Enter your DOB" type="date"><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

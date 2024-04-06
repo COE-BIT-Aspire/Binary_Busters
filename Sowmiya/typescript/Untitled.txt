@@ -1,0 +1,109 @@
+
+
+Typescript :
+
+--> super set of javascript
+
+--> we cannot assign the string to the number it shows error at the compile time itslef
+
+ex:
+
+var  fname="sowmiya"
+
+faname=12 // error 
+
+--> to compile TS:
+
+	npm i -g typescript
+	tsc add.ts
+	node add.js   --> run js file 
+
+---> to run any TS file we need JS file (add.js)
+
+--> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+typescript
+
+
+class Employee {
+    private name: string;
+
+        constructor(name: string) {
+        this.name = name;
+            }
+
+      printDetails(): void {
+		console.log(name)
+           }
+}
+
+const employee1 = new Employee('John Doe');
+
+employee1.printDetails(); 
+
+
+
+
+
+class Employee {
+    public name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    printDetails(): void {
+        console.log(this.name);     }
+}
+
+const employee1 = new Employee('sowmiya');
+employee1.printDetails();
+
+
+
+
+
+
+
+
+
+
+
+
+Mq8#mnsg!gcC

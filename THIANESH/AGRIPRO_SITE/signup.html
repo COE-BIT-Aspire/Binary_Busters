@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agripro</title>
+        <link rel="icon" type="image/x-icon" href="/images/icon/favicon.jpeg">
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <script src="script.ts"></script>
+    <form id="signupForm">
+        <p>FIRST NAME:</p> <input placeholder="Enter your firstname" type="text" required><br>
+        <p>LAST NAME:</p> <input placeholder="Enter your lastname" type="text" required><br>
+        <p>USERNAME:</p> <input placeholder="Enter your username" type="text" required><br>
+        <p>MAIL ID:</p> <input placeholder="Enter your mail id" type="email" required><br>
+        <p>PASSWORD:</p> <input placeholder="Enter your password" id="pass1" type="password" minlength="8" required><br>
+        <p>REPEAT PASSWORD:</p> <input placeholder="Enter your password again" id="pass2" type="password" minlength="8" required><br>
+        <br><button id="submit-button" onclick="checkInputs()">SUBMIT</button><br>
+        <a href="index.html">Log in for existing user</a>
+    </form>
+    <script>
+        function checkInputs() {
+            const password1 = document.getElementById('pass1').value;
+            const password2 = document.getElementById('pass2').value;
+                if (password1 === password2) {
+                    alert("Sign up succesfull");
+                    document.getElementById("signupForm").action="options.html";
+                } else {
+                    alert("Passwords doesn't match!!");
+                }
+            }
+    </script>
+</body>
+</html>

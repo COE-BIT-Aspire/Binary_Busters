@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background:url("./images/travel.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contain{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    margin: 50px;
+}
+.left_top{
+    margin: 20px 0px;
+}
+.left_mid{
+    display: flex;
+    flex-direction: column;
+}
+.left_mid h1{
+    font-size: 50px;
+    color: white;
+}
+.left_mid p{
+    color: white;
+    font-size: 12px;
+}
+.left_mid>*{
+    margin: 12px 0px;
+}
+.inputs input{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    padding: 8px;
+    margin: 6px 0px;
+}
+.email{
+    display: flex;
+    align-items: center;
+}
+.email input{
+    height: 30px;
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+    width: 68%;
+}
+.email button{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    height: 30px;
+    width: ;
+    background-color: goldenrod;
+    outline: none;
+    margin:0px 5px;
+    color: white;
+    border-radius: 5px;
+}
+.media{
+    margin:20px 0px;
+}
+.media img{
+    height: 20px;
+    border-radius: 5px;
+}
+.left_bot{
+    margin: 12px 0px;
+}
+.right{
+    width: 50%;
+}

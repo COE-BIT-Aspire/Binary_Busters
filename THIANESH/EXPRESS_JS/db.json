@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": "40f8",
+      "username": "thianesh",
+      "password": "hello",
+      "mobile": "9677607312",
+      "email": "thianesh2003@gmail.com"
+    },
+    {
+      "id": "1f78",
+      "username": "thianesh",
+      "password": "hello",
+      "mobile": "9677607312",
+      "email": "thianesh2003@gmail.com"
+    },
+    {
+      "id": "53c9",
+      "username": "sample",
+      "password": "hello",
+      "mobile": "123456789",
+      "email": "sample@gmail.com"
+    }
+  ],
+  "products": []
+}

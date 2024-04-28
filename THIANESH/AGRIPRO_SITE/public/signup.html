@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agripro</title>
+    <link rel="icon" type="image/x-icon" href="/images/icon/favicon.jpeg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      /* background-image: url("/images/background/home_background.jpeg"); */
+      background-color: #45a049;
+      background: fixed;
+      margin: 0;
+      padding: 0;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px 60px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    input{
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      /* margin-right:20px ; */
+    }
+
+    #submit-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #submit-button:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #4caf50;
+    }
+    h1 {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #4caf50;
+    }
+
+    a:hover {
+      color: #45a049;
+    }
+  </style>
+  <body>
+    <body>
+      <h1>User info form</h1>
+      <form id="userInfoForm" action="/submit" method="POST">
+          <label for="username">Username:</label><br>
+          <input type="text" id="username" name="username"><br>
+          
+          <label for="password">Password:</label><br>
+          <input type="password" id="password" name="password"><br>
+          
+          <label for="mobile">Mobile No:</label><br>
+          <input type="tel" id="mobile" name="mobile"><br>
+          
+          <label for="email">Email :</label><br>
+          <input type="email" id="email" name="email"><br><br>
+          
+          <input type="submit" id="submit-button" value="Submit">
+          <a href="AGRIPRO_SITE/index.html">Log in for existing user</a>
+      </form>
+      
+  </body>
+  </body>
+</html>

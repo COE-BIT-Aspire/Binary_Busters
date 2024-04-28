@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agripro</title>
-    <link rel="icon" type="image/x-icon" href="/images/icon/favicon.jpeg">
-    <link rel="stylesheet" href="style.css"> 
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="/images/icon/favicon.jpeg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <script src="script.ts"></script>
-    <form id="loginForm">
-        <p>USERNAME:</p> <input placeholder="Enter your username" type="text" required><br>
-        <p>MAIL ID:</p> <input placeholder="Enter your mail id" type="email" required><br>
-        <p>PASSWORD:</p> <input placeholder="Enter your password" id="password" type="password" minlength="8" required><br>
-        <br><button id="login-button" onclick="checkInputs()">SUBMIT</button><br>
-        <a href="signup.html" >Sign up for new user</a>
-    </form>
+    <div class="container">
+      <form id="loginForm">
+        <p>USERNAME:</p>
+        <input placeholder="Enter your username" type="text" required /><br />
+        <p>MAIL ID:</p>
+        <input placeholder="Enter your mail id" type="email" required /><br />
+        <p>PASSWORD:</p>
+        <input
+          placeholder="Enter your password"
+          id="password"
+          type="password"
+          minlength="8"
+          required
+        /><br />
+        <br /><button id="login-button" onclick="checkInputs()">SUBMIT</button
+        ><br />
+        <a href="signup.html">Sign up for new user</a>
+      </form>
+    </div>
     <script>
-        function checkInputs() {
-            let passwordInput = document.getElementById('password');
-            if (passwordInput) {
-                let passwordValue = passwordInput.value.trim();
-                if (passwordValue === "12345678") {
-                    alert("WELCOME BACK!!");
-                    document.getElementById("loginForm").action="options.html";
-                } else {
-                    alert("Password is incorrect! Retry");
-                }
-            }
+      function checkInputs() {
+        let passwordInput = document.getElementById("password");
+        if (passwordInput) {
+          let passwordValue = passwordInput.value.trim();
+          if (passwordValue === "12345678") {
+            alert("WELCOME BACK!!");
+            document.getElementById("loginForm").action = "options.html";
+          } else {
+            alert("Password is incorrect! Retry");
+          }
         }
+      }
     </script>
-</body>
+  </body>
 </html>

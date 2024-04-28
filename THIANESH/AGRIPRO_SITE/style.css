@@ -1,50 +1,91 @@
-body{
-    background-image: url("images/background/login_background.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial;
-    height: 100vh;
+body {
+  font-family: "Open Sans", sans-serif;
+  background-image: url("images/background/login_background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
 }
-form{
-    padding: 30px;
+
+form {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  box-sizing: border-box;
 }
+
 input,
-#submit-button,#login-button{
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 5px;
-    border: none;
-    border-radius: 5px;
-    box-sizing: border-box;
+#submit-button,
+#login-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
-#submit-button,#login-button{
-    background-color: #087c2f;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+
+#submit-button,
+#login-button {
+  background-color: #087c2f;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-p{
-    font-weight: bold;
-    color: rgb(9, 49, 24);
-    margin-bottom: 5px; 
-    width: 100%; 
+
+#submit-button:hover,
+#login-button:hover {
+  background-color: #065a23;
 }
-a{
-    display: block;
-    text-align: center;
-    color: #2cb359;
+
+p {
+  font-weight: bold;
+  color: rgb(9, 49, 24);
+  margin-bottom: 5px;
+  width: 100%;
+  font-size: 18px;
 }
-#optionsell,#optionbuy{
-    background-color: #087c2f;
-    display: block;
-    margin-bottom: 10px;
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 5px;
-    border: none;
-    border-radius: 30px;
-    box-sizing: border-box;
+
+a {
+  display: block;
+  text-align: center;
+  color: #2cb359;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#optionsell,
+#optionbuy {
+  background-color: #087c2f;
+  display: block;
+  margin-bottom: 10px;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 30px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+#optionsell:hover,
+#optionbuy:hover {
+  background-color: #065a23;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 100px;
 }

@@ -1,35 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Agripro</title>
-        <link rel="icon" type="image/x-icon" href="/images/icon/favicon.jpeg">
-        <link rel="stylesheet" href="style.css">
-    </head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agripro</title>
+    <link rel="icon" type="image/x-icon" href="/images/icon/favicon.jpeg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #4caf50;
+    }
+
+    a:hover {
+      color: #45a049;
+    }
+  </style>
+  <body>
     <script src="script.ts"></script>
     <form id="signupForm">
-        <p>FIRST NAME:</p> <input placeholder="Enter your firstname" type="text" required><br>
-        <p>LAST NAME:</p> <input placeholder="Enter your lastname" type="text" required><br>
-        <p>USERNAME:</p> <input placeholder="Enter your username" type="text" required><br>
-        <p>MAIL ID:</p> <input placeholder="Enter your mail id" type="email" required><br>
-        <p>PASSWORD:</p> <input placeholder="Enter your password" id="pass1" type="password" minlength="8" required><br>
-        <p>REPEAT PASSWORD:</p> <input placeholder="Enter your password again" id="pass2" type="password" minlength="8" required><br>
-        <br><button id="submit-button" onclick="checkInputs()">SUBMIT</button><br>
-        <a href="index.html">Log in for existing user</a>
+      <p>FIRST NAME:</p>
+      <input placeholder="Enter your firstname" type="text" required /><br />
+      <p>LAST NAME:</p>
+      <input placeholder="Enter your lastname" type="text" required /><br />
+      <p>USERNAME:</p>
+      <input placeholder="Enter your username" type="text" required /><br />
+      <p>MAIL ID:</p>
+      <input placeholder="Enter your mail id" type="email" required /><br />
+      <p>PASSWORD:</p>
+      <input
+        placeholder="Enter your password"
+        id="pass1"
+        type="password"
+        minlength="8"
+        required
+      /><br />
+      <p>REPEAT PASSWORD:</p>
+      <input
+        placeholder="Enter your password again"
+        id="pass2"
+        type="password"
+        minlength="8"
+        required
+      /><br />
+      <br /><button id="submit-button" onclick="checkInputs()">SUBMIT</button
+      ><br />
+      <a href="index.html">Log in for existing user</a>
     </form>
     <script>
-        function checkInputs() {
-            const password1 = document.getElementById('pass1').value;
-            const password2 = document.getElementById('pass2').value;
-                if (password1 === password2) {
-                    alert("Sign up succesfull");
-                    document.getElementById("signupForm").action="options.html";
-                } else {
-                    alert("Passwords doesn't match!!");
-                }
-            }
+      function checkInputs() {
+        const password1 = document.getElementById("pass1").value;
+        const password2 = document.getElementById("pass2").value;
+        if (password1 === password2) {
+          alert("Sign up succesfull");
+          document.getElementById("signupForm").action = "options.html";
+        } else {
+          alert("Passwords doesn't match!!");
+        }
+      }
     </script>
-</body>
+  </body>
 </html>

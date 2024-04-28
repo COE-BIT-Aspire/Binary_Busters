@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agripro</title>
-    <link rel="icon" type="image/x-icon" href="/images/icon/favicon.jpeg">
-    <link rel="stylesheet" href="sell_style.css">
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="/images/icon/favicon.jpeg" />
+    <link rel="stylesheet" href="sell_style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Agripro</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="buy.html">Buy</a></li>
+          <li><a href="sell.html">Sell</a></li>
+          <li><a href="index.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
     <div class="form-container">
-        <label for="name">Name</label>
-        <input type="text" id="name">
-        <label for="desc">Description</label>
-        <input type="text" id="desc">
-        <label for="type">Type of the product</label>
-        <input type="text" id="type">
-        <label for="price">Price</label>
-        <input type="number" id="price">
-        <label for="mfd">MFD</label>
-        <input type="date" id="mfd">
-        <label for="fuel">Fuel Type</label>
-        <div class="radio-group">
-            <input type="radio" id="petrol" name="fuel" value="Petrol">
-            <label for="petrol">Petrol</label>
-            <input type="radio" id="disel" name="fuel" value="Disel">
-            <label for="disel">Disel</label>
-            <input type="radio" id="electric" name="fuel" value="Electric">
-            <label for="electric">Electric</label>
-        </div>
-        <label for="num">Phone number</label>
-        <input type="number" id="num">
-        <label for="photo">Photos</label>
-        <input type="file" id="photo">
-        <button onclick="alerter()" id="submit-button">SUBMIT</button>
+      <label for="name">Name</label>
+      <input type="text" id="name" />
+      <label for="desc">Description</label>
+      <input type="text" id="desc" />
+      <label for="type">Type of the product</label>
+      <input type="text" id="type" />
+      <label for="price">Price</label>
+      <input type="number" id="price" />
+      <label for="mfd">MFD</label>
+      <input type="date" id="mfd" />
+      <label for="fuel">Fuel Type</label>
+      <div class="radio-group">
+        <input type="radio" id="petrol" name="fuel" value="Petrol" />
+        <label for="petrol">Petrol</label>
+        <input type="radio" id="disel" name="fuel" value="Disel" />
+        <label for="disel">Disel</label>
+        <input type="radio" id="electric" name="fuel" value="Electric" />
+        <label for="electric">Electric</label>
+      </div>
+      <label for="num">Phone number</label>
+      <input type="number" id="num" />
+      <label for="photo">Photos</label>
+      <input type="file" id="photo" />
+      <button onclick="alerter()" id="submit-button">SUBMIT</button>
     </div>
     <script>
-        function alerter() {
-            alert("Product listed for selling successfully!!");
-            window.location.href = "options.html";
-        }
+      function alerter() {
+        alert("Product listed for selling successfully!!");
+        window.location.href = "home.html";
+      }
     </script>
-</body>
+  </body>
 </html>

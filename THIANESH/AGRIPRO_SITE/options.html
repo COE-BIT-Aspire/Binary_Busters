@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agripro</title>
-    <link rel="icon" type="image/x-icon" href="/images/icon/favicon.jpeg">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="/images/icon/favicon.jpeg" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .options {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
     <div class="options">
-        <button onclick="redirectToBuyPage()" id="optionbuy">BUY</button>
+      <button onclick="redirectToBuyPage()" id="optionbuy">BUY</button>
     </div>
     <div class="options">
-        <button onclick="redirectToSellPage()" id="optionsell">SELL</button>
+      <button onclick="redirectToSellPage()" id="optionsell">SELL</button>
     </div>
 
     <script>
-        function redirectToBuyPage() {
-            window.location.href = "buy.html";
-        }
-        function redirectToSellPage() {
-            window.location.href = "sell.html";
-        }
+      function redirectToBuyPage() {
+        window.location.href = "buy.html";
+      }
+      function redirectToSellPage() {
+        window.location.href = "sell.html";
+      }
     </script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,13 @@
+3 types of miidle ware
+
+* buildin middleware == no next 
+* custom middleware
+    //logs
+* third parties middleware 
+
+// to apply middleware -- use 
+ex:
+app.use(express.urlencode({extended:false}));--> when data is submitted in form to get that data 
+app.use(express.json()); ---> to get the data when data is submitted in jason formate
+app.use(express.static(path.join(__dirname,'/public'))); -- to access css file
+

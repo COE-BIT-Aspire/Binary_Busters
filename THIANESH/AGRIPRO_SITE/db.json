@@ -20,6 +20,13 @@
       "password": "123465789",
       "mobile": "9677607312",
       "email": "thianesh2003@gmail.com"
+    },
+    {
+      "id": "e848",
+      "username": "thianesh",
+      "password": "132456789",
+      "mobile": "9677607312",
+      "email": "thianesh2003@gmail.com"
     }
   ],
   "products": []

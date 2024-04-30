@@ -53,8 +53,6 @@ console.log("Total Chair Quantity:", chairQuantity);
 
 
 const meetingAttendees = new Set();
-
-
 function markAttendance(employeeId) {
     meetingAttendees.add(employeeId);
 }
@@ -73,17 +71,6 @@ console.log("Employee with ID emp123 has attended the meeting:", hasAttended("em
 console.log("Employee with ID emp789 has attended the meeting:", hasAttended("emp789"));
 
 
-
-// Array of product objects
-
-
-const products = [
-    { name: "Laptop", price: 1200 },
-    { name: "Smartphone", price: 800 },
-    { name: "Tablet", price: 300 },
-    { name: "Headphones", price: 150 },
-    { name: "Smartwatch", price: 250 },
-];
 
 
 

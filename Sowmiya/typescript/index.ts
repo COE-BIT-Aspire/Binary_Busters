@@ -112,4 +112,111 @@ console.log(`User with ID user789 has liked the post: ${hasLikedPost("user789")}
 
 
 
+//number 
+
+
+const speed:number =60;
+console.log(speed);
+
+
+
+//sting
+
+
+const username:string ="sowmiya";
+console.log(username);
+
+
+//boolean 
+
+const isDayTime : boolean = true;
+console.log(isDayTime);
+
+//null 
+
+const value:null =null;
+console.log(value);
+
+
+//undefined 
+
+const undefinedValue:undefined=undefined;
+console.log(undefinedValue);
+
+
+//enum 
+
+//members --> values assign 
+
+enum Direction{
+    up,
+    Down,
+    left,
+    right
+}
+console.log(Direction.up);
+
+
+
+//array 
+
+
+const array:string[]=new Array("sowmiya","viswanathan");
+console.log(array);
+
+
+
+//set 
+
+const uniqueNumber:Set<number> = new Set([1,2,3,4,5])
+console.log(uniqueNumber);
+
+
+//map 
+
+
+const studentGrades:Map<string,number>=new Map();
+studentGrades.set("Alice", 90);
+studentGrades.set("Bob", 85);
+console.log(studentGrades.get("Alice"));
+
+
+
+
+//object 
+
+
+const carModel ={
+    "name":"Toyota",
+    model:"camry",
+    year:2020
+}
+console.log(carModel);
+
+
+
+// class 
+
+
+class Person {
+    name:string;
+    age:number;
+    constructor(name:string,age:number){
+        this.name= name;
+        this.age=age;    
+    }
+    greet():void{
+        console.log(`hai i am ${this.name} and my age is ${this.age}`);
+    }
+}
+
+const student = new Person("sowmiya",21);
+student.greet();
+
+
+
+
+
+
+
 

@@ -96,3 +96,84 @@ const filteredProducts = filterProductsByPriceRange(products, 200, 500);
 // Display filtered products
 console.log("Products between $200 and $500:");
 filteredProducts.forEach(product => console.log(`${product.name}: $${product.price}`));
+
+// closure 
+
+
+
+
+function outer_parent() {
+    var num1 = 20;
+
+    function inner1() {
+        var num2 = 30;
+
+        function inner2() {
+            console.log(num1, num2);
+        }
+
+        num2 = 100;
+        inner2();
+    }
+    inner1();
+}
+
+outer_parent();
+
+
+
+//synchronous function 
+
+
+
+function squareSync(x) {
+    return x * x;
+}
+
+console.log("Before calculating square");
+const squareResult = squareSync(5);
+console.log("Square of 5:", squareResult);
+console.log("After calculating square");
+
+
+
+//asynchronous
+
+
+function fetchDataAsync() {
+    setTimeout(() => {
+        const data = { id: 1, name: "John" };
+        console.log("Fetched data:", data);
+    }, 2000); // Fetches data after 2 seconds delay
+}
+
+console.log("Before fetching data");
+fetchDataAsync();
+console.log("After fetching data");
+
+
+
+
+//setTimout || callbackfunction 
+
+
+setTimeout(() => {
+    console.log("Inside setTimeout() after 3 seconds");
+}, 3000);
+
+
+//setInterval  and clearInterval 
+
+
+let counter = 0;
+const intervalId = setInterval(() => {
+    console.log("Counter:", counter);
+    counter++;
+    if (counter === 5) {
+        clearInterval(intervalId);
+        console.log("Interval stopped");
+    }
+}, 1000);
+
+
+

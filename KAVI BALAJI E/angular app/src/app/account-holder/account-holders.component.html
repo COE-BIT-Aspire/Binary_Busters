@@ -1,0 +1,38 @@
+<table>
+    <thead>
+      <tr>
+        <th>Account Number</th>
+        <th>Account Holder Name</th>
+        <th>Type of Account</th>
+        <th>Amount</th>
+        <th>Date/Bank Name</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+       @for (holder of accountHolders; track $index) {
+       <tr>
+        <td>{{ holder.accountNumber }}</td>
+        <td>{{ holder.acHolderName }}</td>
+        <td>
+          @switch(holder.typeOfAccount){
+            @case('SavingsAcc') {Savings Account}
+            @case('BusinessAcc') {Business Account}
+            @case ('SalaryAcc') {Salary Account}
+            @default {Other Account}
+            }
+        </td>
+        <td>{{ holder.amount }}</td>
+        <td>{{ holder.bankName }}</td>
+        <td>
+          <ng-container [@Switch]="true">
+            <span *@SwitchCase="holder.amount < 1000">Inactive</span>
+            <span *@SwitchCase="holder.amount >= 1000 && holder.amount <= 10000">Active</span>
+            <span *@SwitchCase="holder.amount > 10000">Loyal</span>
+          </ng-container>
+        </td>
+      </tr>
+    }
+    </tbody>
+  </table>
+  

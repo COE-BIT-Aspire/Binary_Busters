@@ -1,1 +1,9 @@
-<app-shop></app-shop>
+<h1 class="left-column">Welcome to Angular</h1>
+
+<a [routerLink]="'shop'">Shop</a>&nbsp;
+<a [routerLink]="'product'">View Products</a>&nbsp;
+<a [routerLink]="'student'">Student Details</a>&nbsp;
+<a [routerLink]="'account-holders'">AC Details</a>
+<div class="container" style="border: 1px solid rgb(72, 59, 171);">
+<router-outlet></router-outlet>
+</div>
